@@ -35,6 +35,29 @@
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "DP8oHZq44gQC0CC0j",
+            });
+        })();
+    </script>
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            console.log(e.target);
+            emailjs.sendForm('service_lpcp0bh', 'template_rjhvk4a', e.target)
+               .then(function () {
+                    alert('Thank you for contacting us. We will get back to you shortly.');
+                })
+               .catch(function (error) {
+                    alert('Oops! Something went wrong. Please try again later.');
+                    console.error('Failed to send email: ', error);
+                });
+        }
+    </script>
 </head>
 
 <body>
@@ -205,7 +228,7 @@
                             </p>
                         </div>
                         <!-- Form Start -->
-                        <form id="appointmentForm" action="#" method="POST" data-toggle="validator">
+                        <form id="" onsubmit="sendEmail(event)" data-toggle="validator">
                             <div class="row">
                                 <div class="form-group col-md-12 mb-4">
                                     <input type="text" name="name" class="form-control" id="name"
@@ -1129,7 +1152,14 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>I recently visited Care and Cure Physiotherapy Clinic for treatment, and I couldn't be more impressed. Their professionalism was evident from the start, with a warm welcome from the receptionist and expert care from Dr. Sumananand. The treatment was tailored to my needs and delivered with skill and compassion, resulting in significant improvement. The entire staff was polite and accommodating, making each visit a pleasure. I highly recommend this clinic for anyone seeking good physiotherapy care.
+                                                <p>I recently visited Care and Cure Physiotherapy Clinic for treatment,
+                                                    and I couldn't be more impressed. Their professionalism was evident
+                                                    from the start, with a warm welcome from the receptionist and expert
+                                                    care from Dr. Sumananand. The treatment was tailored to my needs and
+                                                    delivered with skill and compassion, resulting in significant
+                                                    improvement. The entire staff was polite and accommodating, making
+                                                    each visit a pleasure. I highly recommend this clinic for anyone
+                                                    seeking good physiotherapy care.
                                                 </p>
                                             </div>
                                         </div>
@@ -1160,7 +1190,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>I visited care and cure for my scapular pain. Improvement evident from first session itself. Dr is well versed and thorough with his diagnosis and treatment. Best part of treatment is minimum medication and maximum effectiveness, and Dr. Clearly explains the reason so that you take good care of your issue and resolve it completely. A must visit for anyone in any muscular or joint pain.
+                                                <p>I visited care and cure for my scapular pain. Improvement evident
+                                                    from first session itself. Dr is well versed and thorough with his
+                                                    diagnosis and treatment. Best part of treatment is minimum
+                                                    medication and maximum effectiveness, and Dr. Clearly explains the
+                                                    reason so that you take good care of your issue and resolve it
+                                                    completely. A must visit for anyone in any muscular or joint pain.
 
                                                 </p>
                                             </div>
@@ -1192,7 +1227,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>One of my knees was very stiff and pained a lot but Dr.Jha from Care and Cure Physiotherapy center really helped me to get over the long-standing problem with proper care and I could join back sports at the age of almost 70 which I had to miss for about last 6 months. Physiotherapist Dr.Jha takes personal care and is great at the work he does! The centre is also well equipped. Highly recommended!
+                                                <p>One of my knees was very stiff and pained a lot but Dr.Jha from Care
+                                                    and Cure Physiotherapy center really helped me to get over the
+                                                    long-standing problem with proper care and I could join back sports
+                                                    at the age of almost 70 which I had to miss for about last 6 months.
+                                                    Physiotherapist Dr.Jha takes personal care and is great at the work
+                                                    he does! The centre is also well equipped. Highly recommended!
 
                                                 </p>
                                             </div>
@@ -1224,7 +1264,14 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                             <div class="testimonial-content">
-                                                <p>Dr. Sumananand Jha is an experienced and excellent physiotherapist. I had an ACL tear and visited his clinic for the treatment. He patiently explained and helped me to recover from the injury unlike other physiotherapist in dhanbad who had no knowledge about the condition. His exercises, guidance and manual therapy helped me in walking again without any discomfort. The clinic is fully equipped, clean and the staffs are also very courteous. Would definitely recommend.
+                                                <p>Dr. Sumananand Jha is an experienced and excellent physiotherapist. I
+                                                    had an ACL tear and visited his clinic for the treatment. He
+                                                    patiently explained and helped me to recover from the injury unlike
+                                                    other physiotherapist in dhanbad who had no knowledge about the
+                                                    condition. His exercises, guidance and manual therapy helped me in
+                                                    walking again without any discomfort. The clinic is fully equipped,
+                                                    clean and the staffs are also very courteous. Would definitely
+                                                    recommend.
 
                                                 </p>
                                             </div>
@@ -1495,7 +1542,8 @@
                                     <img src="images/icon-location.svg" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>At-Park clinic, Parking Market Rd, Hirapur, Pandey Muhalla, Dhanbad, Jharkhand 826001
+                                    <p>At-Park clinic, Parking Market Rd, Hirapur, Pandey Muhalla, Dhanbad, Jharkhand
+                                        826001
                                     </p>
                                 </div>
                             </div>

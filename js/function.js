@@ -283,21 +283,34 @@
 		var name = $("#name").val();
 		var email = $("#email").val();
 		var phone = $("#phone").val();
-		var phone = $("#services").val();
+		var services = $("#services").val();
 		var date = $("#date").val();
 
-		$.ajax({
-			type: "POST",
-			url: "form-appointment.php",
-			data: "name=" + name + "&email=" + email + "&phone=" + phone + "&services=" + services + "&date=" + date,
-			success : function(text){
-				if (text == "success"){
-					appointmentformSuccess();
-				} else {
-					appointmentsubmitMSG(false,text);
-				}
-			}
-		});
+		let data={
+			name,email,phone,services,date
+		}
+
+		console.log(e.target);
+            emailjs.sendForm('service_lpcp0bh', 'template_rjhvk4a', data)
+               .then(function () {
+                    alert('Thank you for contacting us. We will get back to you shortly.');
+                })
+               .catch(function (error) {
+                    alert('Oops! Something went wrong. Please try again later.');
+                    console.error('Failed to send email: ', error);
+                });
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: "form-appointment.php",
+		// 	data: "name=" + name + "&email=" + email + "&phone=" + phone + "&services=" + services + "&date=" + date,
+		// 	success : function(text){
+		// 		if (text == "success"){
+		// 			appointmentformSuccess();
+		// 		} else {
+		// 			appointmentsubmitMSG(false,text);
+		// 		}
+		// 	}
+		// });
 	}
 
 	function appointmentformSuccess(){
