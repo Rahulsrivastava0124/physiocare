@@ -343,3 +343,12 @@
 	}
 	
 })(jQuery);
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+let activeIndex = 0;
+
+setInterval(() => {
+  carouselItems[activeIndex].classList.remove('active');
+  activeIndex = (activeIndex + 1) % carouselItems.length;
+  carouselItems[activeIndex].classList.add('active');
+}, 5000); // Change image every 3 seconds
