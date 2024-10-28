@@ -5144,3 +5144,11 @@ header.main-header .header-sticky.active{
     padding: 20px;
     color:transparent; Change text color for visibility
   } */
+
+  @media only screen and (min-width: 576px) {
+
+	.h-sm-auto{
+		height: auto !important;
+	}
+
+  }
