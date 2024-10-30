@@ -5146,9 +5146,7 @@ header.main-header .header-sticky.active{
   } */
 
   @media only screen and (max-width: 576px) {
-
 	.h-sm-auto{
 		height: auto !important;
 	}
-
   }
