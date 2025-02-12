@@ -5,9 +5,9 @@
 	var $body = $('body'); 
 
 	/* Preloader Effect */
-	$window.on('load', function(){
-		$(".preloader").fadeOut(200);
-	});
+	// $window.on('load', function(){
+	// 	$(".preloader").fadeOut(50);
+	// });
 
 	/* Sticky Header */	
 	if($('.active-sticky-header').length){
@@ -28,6 +28,7 @@
 		});
 	}	
 	
+
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
@@ -41,6 +42,7 @@
 		});
 	}
 
+	
 	/* Hero Slider Layout JS */
 	const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
 		slidesPerView : 1,
